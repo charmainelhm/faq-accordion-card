@@ -20,6 +20,10 @@
   padding: 0;
 }
 
+.container {
+  margin: auto;
+}
+
 /* Typography */
 html {
   font-size: 62.5%;
@@ -171,8 +175,12 @@ p {
 }
 
 @media screen and (min-width: 900px) {
+  .container {
+    padding: 0 5rem;
+  }
+
   .card {
-    margin: 0 auto;
+    width: 100%;
     max-width: 920px;
     padding: 0;
     display: grid;
@@ -193,17 +201,6 @@ p {
     overflow: hidden;
   }
 
-  /* .card__images::after {
-    content: "";
-    background: url(../images/illustration-box-desktop.svg);
-    width: 150px;
-    height: 150px;
-    display: block;
-    position: absolute;
-    left: -11rem;
-    top: 18rem;
-  } */
-
   .card__images > * {
     position: absolute;
     right: 8rem;
@@ -218,8 +215,11 @@ p {
   }
 
   .img-box--desktop {
-    top: 17rem;
-    left: -10rem;
+    position: absolute;
+    /* top: 17rem;
+    left: -10rem; */
+    transform: translate(-100px, 320px);
+    z-index: 1;
   }
 
   .img-actual--mobile,
